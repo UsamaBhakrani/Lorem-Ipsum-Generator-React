@@ -2,7 +2,7 @@ import { useState } from "react";
 import data from "./data";
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [text, setText] = useState([]);
 
   const handleSubmit = (e) => {
@@ -25,7 +25,13 @@ const App = () => {
           generate
         </button>
       </form>
-      
+      <article className="lorem-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          delectus debitis soluta illo asperiores facilis tempora iusto
+          quibusdam magni voluptas?
+        </p>
+      </article>
     </section>
   );
 };
