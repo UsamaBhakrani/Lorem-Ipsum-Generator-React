@@ -7,6 +7,8 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    let amount = parseInt(count);
+    setText(data.slice(0, amount));
   };
 
   return (
@@ -26,11 +28,9 @@ const App = () => {
         </button>
       </form>
       <article className="lorem-text">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-          delectus debitis soluta illo asperiores facilis tempora iusto
-          quibusdam magni voluptas?
-        </p>
+        {text.map((item, index) => {
+          return <p key={index}>{item}</p>;
+        })}
       </article>
     </section>
   );
